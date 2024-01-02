@@ -1,0 +1,16 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+while ( my $l = <> ) {
+    my $n = chomp $l;
+
+    my @v1 = split /\./, $l;
+    my @v2 = reverse @v1;
+
+    my $r1 = join '.', @v2;
+    my $r2 = $/ x $n;
+
+    print $r1, $r2;
+}
